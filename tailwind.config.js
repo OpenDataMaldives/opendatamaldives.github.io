@@ -7,11 +7,12 @@ export default {
     extend: {
       fontFamily: {
         sans: ["RedditSans-regular", "Inter", ...defaultTheme.fontFamily.sans],
-        'opdmv-bold': ['RedditSans-bold', 'sans-serif'],
-        'opdmv-italic': ['RedditSans-italic', 'sans-serif'],
-        'opdmv-light': ['RedditSans-light', 'sans-serif'],
-        'opdmv-regular': ['RedditSans-regular', 'sans-serif'],
-        'opdmv-semi-bold': ['RedditSans-semi-bold', 'sans-serif'],
+        'opdmv-bold': ['opdmv-bold', 'sans-serif'],
+        // 'opdmv-bold': ['RedditSans-bold', 'sans-serif'],
+        'opdmv-italic': ['opdmv-italic', 'sans-serif'],
+        'opdmv-light': ['opdmv-light', 'sans-serif'],
+        'opdmv-regular': ['opdmv-regular', 'sans-serif'],
+        'opdmv-semi-bold': ['opdmv-semi-bold', 'sans-serif'],
       },
     },
   },

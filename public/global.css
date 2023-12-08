@@ -1,6 +1,6 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-    font-family: RedditSans-bold sans-serif !important;
+    font-family: "opdmv-bold";
     src: url('/fonts/RedditSans-Bold.woff2') format('woff2'),
          url('/fonts/RedditSans-Bold.woff') format('woff'),
          url('/fonts/RedditSans-Bold.ttf') format('truetype');
@@ -10,7 +10,7 @@
 }
 
 @font-face {
-    font-family: RedditSans-italic sans-serif !important;
+    font-family: "opdmv-italic";
     src: url('/fonts/RedditSans-Italic.woff2') format('woff2'),
          url('/fonts/RedditSans-Italic.woff') format('woff'),
          url('/fonts/RedditSans-Italic.ttf') format('truetype');
@@ -20,7 +20,7 @@
 }
 
 @font-face {
-    font-family: RedditSans-light sans-serif !important;
+    font-family: "opdmv-light";
     src: url('/fonts/RedditSans-Light.woff2') format('woff2'),
          url('/fonts/RedditSans-Light.woff') format('woff'),
          url('/fonts/RedditSans-Light.ttf') format('truetype');
@@ -30,7 +30,7 @@
 }
 
 @font-face {
-    font-family: RedditSans-regular sans-serif !important;
+    font-family: "opdmv-regular";
     src: url('/fonts/RedditSans-Regular.woff2') format('woff2'),
          url('/fonts/RedditSans-Regular.woff') format('woff'),
          url('/fonts/RedditSans-Regular.ttf') format('truetype');
@@ -40,7 +40,7 @@
 }
 
 @font-face {
-    font-family: RedditSans-semi-bold sans-serif !important;
+    font-family: "opdmv-semi";
     src: url('/fonts/RedditSans-SemiBold.woff2') format('woff2'),
          url('/fonts/RedditSans-SemiBold.woff') format('woff'),
          url('/fonts/RedditSans-SemiBold.ttf') format('truetype');
