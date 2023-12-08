@@ -1,0 +1,127 @@
+---
+async function fetchData(url) {
+    const response = await fetch(url);
+    const data = await response.json();
+    return data;
+}
+
+const CabinetMinisters_data = await fetchData('https://raw.githubusercontent.com/OpenDataMaldives/government/main/presidents-office/cabinet.json');
+const DeputyMinisters_data = await fetchData('https://raw.githubusercontent.com/OpenDataMaldives/government/main/presidents-office/deputy-ministers.json');
+const StateMinisters_data = await fetchData('https://raw.githubusercontent.com/OpenDataMaldives/government/main/presidents-office/state-ministers.json');
+
+const chartLabel = ['Cabinet Ministers', 'Deputy Ministers', 'State Ministers'];
+const chatData = [CabinetMinisters_data.CabinetMembers.length, DeputyMinisters_data.meta.recordCount, StateMinisters_data.meta.recordCount];
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro</title>
+    </head>
+    <body class="p-10">
+        <div class="container mx-auto">
+            <h1 class="text-3xl">Government of the Maldives</h1>
+
+
+            <div>
+                <div id="chartlabel" data-labels={chartLabel}></div>
+                <div id="chartdata" data-labels={chatData}></div>
+                <!-- display a chart to show the count of each  -->
+                <canvas id="myChart"></canvas>
+            </div>
+
+            <div class="flex">
+        <div class="py-4">
+            <h2 class="font-bold text-xl">Cabinet Ministers</h2>
+            <!-- get the lenth of cabinet ministers -->
+            <p class="italic my-2">{CabinetMinisters_data.CabinetMembers.length} cabinet ministers</p>
+            <ul class="text-sm">
+            {CabinetMinisters_data.CabinetMembers.map(item => (
+                <li class="my-4"><span class="block">{item.minister_en}</span> <span class="block opacity-50"> {item.position}</span> <span class="block opacity-50"> {item.position_dv}</span></li>
+            ))}
+            </ul>
+        </div>
+        
+        <div class="py-4">
+            <h2 class="font-bold text-xl">Deputy Ministers</h2>
+            <!-- get the length of deputy ministers -->
+            <p class="italic my-2">{DeputyMinisters_data.meta.recordCount} Deputy ministers</p>
+            <ul class="text-sm">
+            {DeputyMinisters_data.data.map(item => (
+                item.officials.map(official => (
+                    <li class="my-4"><span class="block">{official.name_en}</span> <span class="block opacity-50"> {official.position_en}</span></li>
+                ))
+            ))}
+            </ul>
+        </div>
+
+        <div class="py-4">
+            <h2 class="font-bold text-xl">State Ministers</h2>
+            <!-- get the lenth of state ministers -->
+            <p class="italic my-2">{StateMinisters_data.meta.recordCount} State ministers</p>
+            <ul class="text-sm">
+            {StateMinisters_data.data.map(item => (
+                <li class="my-4"><span class="block">{item.name_en}</span> <span class="block opacity-50"> {item.position_en}</span></li>
+            ))}
+            </ul>
+        </div>
+        </div>
+        </div>
+        <script>
+            import Chart from 'chart.js/auto';
+
+            // get data-labels from the data
+            const chartLabel = document.getElementById('chartlabel').dataset.labels.split(',');
+            const chartData = document.getElementById('chartdata').dataset.labels.split(',');
+
+            // // convert the data to an array
+            // const dataLabels = chartLabel.split(',');
+            // const data = chartData.split(',');
+
+            console.log(chartLabel)
+
+
+    window.onload = function() {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: chartLabel,
+            datasets: [{
+            label: 'Government of Maldives',
+            data: chartData,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)',
+                'rgba(255, 205, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(201, 203, 207, 0.2)',
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(255, 159, 64, 0.2)', 
+                'rgba(255, 205, 86, 0.2)'
+            ],
+            borderColor: [
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)',
+                'rgb(75, 192, 192)',
+                'rgb(54, 162, 235)',
+                'rgb(153, 102, 255)',
+                'rgb(201, 203, 207)',
+                'rgb(255, 99, 132)',
+                'rgb(255, 159, 64)',
+                'rgb(255, 205, 86)'
+            ],
+            borderWidth: 1
+            }]
+        },
+        });
+    }
+</script>
+    </body>
+</html>
