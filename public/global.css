@@ -1,45 +1,50 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
-    font-family: 'RedditSans-bold';
+    font-family: RedditSans-bold sans-serif !important;
     src: url('/fonts/RedditSans-Bold.woff2') format('woff2'),
-         url('/fonts/RedditSans-Bold.woff') format('woff');
-    font-weight: normal;
+         url('/fonts/RedditSans-Bold.woff') format('woff'),
+         url('/fonts/RedditSans-Bold.ttf') format('truetype');
+    font-weight: 700;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RedditSans-italic';
+    font-family: RedditSans-italic sans-serif !important;
     src: url('/fonts/RedditSans-Italic.woff2') format('woff2'),
-         url('/fonts/RedditSans-Italic.woff') format('woff');
+         url('/fonts/RedditSans-Italic.woff') format('woff'),
+         url('/fonts/RedditSans-Italic.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RedditSans-light';
+    font-family: RedditSans-light sans-serif !important;
     src: url('/fonts/RedditSans-Light.woff2') format('woff2'),
-         url('/fonts/RedditSans-Light.woff') format('woff');
-    font-weight: normal;
+         url('/fonts/RedditSans-Light.woff') format('woff'),
+         url('/fonts/RedditSans-Light.ttf') format('truetype');
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RedditSans-regular';
+    font-family: RedditSans-regular sans-serif !important;
     src: url('/fonts/RedditSans-Regular.woff2') format('woff2'),
-         url('/fonts/RedditSans-Regular.woff') format('woff');
+         url('/fonts/RedditSans-Regular.woff') format('woff'),
+         url('/fonts/RedditSans-Regular.ttf') format('truetype');
     font-weight: normal;
-    font-style: normal;
+    font-style: 400;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'RedditSans-semi-bold';
+    font-family: RedditSans-semi-bold sans-serif !important;
     src: url('/fonts/RedditSans-SemiBold.woff2') format('woff2'),
-         url('/fonts/RedditSans-SemiBold.woff') format('woff');
-    font-weight: normal;
+         url('/fonts/RedditSans-SemiBold.woff') format('woff'),
+         url('/fonts/RedditSans-SemiBold.ttf') format('truetype');
+    font-weight: 600;
     font-style: normal;
     font-display: swap;
 }

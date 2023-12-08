@@ -20,6 +20,7 @@ const chatData = [CabinetMinisters_data.CabinetMembers.length, DeputyMinisters_d
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
+        <link rel="stylesheet" href="/global.css" />
         <meta name="generator" content={Astro.generator} />
         <title>Astro</title>
     </head>
@@ -99,12 +100,6 @@ const chatData = [CabinetMinisters_data.CabinetMembers.length, DeputyMinisters_d
             // get data-labels from the data
             const chartLabel = document.getElementById('chartlabel').dataset.labels.split(',');
             const chartData = document.getElementById('chartdata').dataset.labels.split(',');
-
-            // // convert the data to an array
-            // const dataLabels = chartLabel.split(',');
-            // const data = chartData.split(',');
-
-            console.log(chartLabel)
 
 
     window.onload = function() {
