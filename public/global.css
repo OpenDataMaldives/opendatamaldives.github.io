@@ -1,7 +1,8 @@
 /* Register your custom font family and tell the browser where to find it. */
 @font-face {
     font-family: 'RedditSans-bold';
-    src: url('/fonts/RedditSans-Bold.woff') format('woff');
+    src: url('/fonts/RedditSans-Bold.woff2') format('woff2'),
+         url('/fonts/RedditSans-Bold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -9,7 +10,8 @@
 
 @font-face {
     font-family: 'RedditSans-italic';
-    src: url('/fonts/RedditSans-Italic.woff') format('woff');
+    src: url('/fonts/RedditSans-Italic.woff2') format('woff2'),
+         url('/fonts/RedditSans-Italic.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -17,7 +19,8 @@
 
 @font-face {
     font-family: 'RedditSans-light';
-    src: url('/fonts/RedditSans-Light.woff') format('woff');
+    src: url('/fonts/RedditSans-Light.woff2') format('woff2'),
+         url('/fonts/RedditSans-Light.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -25,7 +28,8 @@
 
 @font-face {
     font-family: 'RedditSans-regular';
-    src: url('/fonts/RedditSans-Regular.woff') format('woff');
+    src: url('/fonts/RedditSans-Regular.woff2') format('woff2'),
+         url('/fonts/RedditSans-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -33,7 +37,8 @@
 
 @font-face {
     font-family: 'RedditSans-semi-bold';
-    src: url('/fonts/RedditSans-SemiBold.woff') format('woff');
+    src: url('/fonts/RedditSans-SemiBold.woff2') format('woff2'),
+         url('/fonts/RedditSans-SemiBold.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
